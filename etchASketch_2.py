@@ -24,7 +24,7 @@ clock = pygame.time.Clock()
 screen.fill((255,255,255))
 
 while(1):
-    clock.tick(60)
+    clock.tick(60) #keeps game from exceeding 60 fps
     pygame.draw.circle(screen, (0,0,0), (x,y), 2)
     pygame.display.update()
     key = pygame.key.get_pressed()
