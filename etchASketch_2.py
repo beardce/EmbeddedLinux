@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # FileName: etchASketch_2.py
 # Description: simple implementation of an Etch A Sketch in Python
 #imports
