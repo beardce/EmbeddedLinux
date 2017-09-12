@@ -17,10 +17,6 @@ GPIO.setup(BUT1, GPIO.IN)
 GPIO.setup(BUT2, GPIO.IN)
 GPIO.setup(BUT3, GPIO.IN)
 GPIO.setup(BUT4, GPIO.IN)
-GPIO.add_event_detect(BUT1, GPIO.FALLING)
-GPIO.add_event_detect(BUT2, GPIO.RISING)
-GPIO.add_event_detect(BUT3, GPIO.FALLING)
-GPIO.add_event_detect(BUT4, GPIO.RISING)
 
 # variables
 #screenXSize = 600
