@@ -23,7 +23,7 @@ GPIO.setup(BUT4, GPIO.IN)
 buttonMap = {BUT1: LED1, BUT2: LED2, BUT3: LED3, BUT4: LED4}
 
 def updateLEDs(number):
-	print("LED number " + str(number))
+	print("LED number " + number)
 	status = GPIO.input(number)
 	GPIO.output(buttonMap[number],status)
 	print(buttonMap[number] + "changed to status " + str(status))
