@@ -43,13 +43,13 @@ while(1):
     clock.tick(60) #keeps game from exceeding 60 fps
     pygame.draw.circle(screen, (0,0,0), (x,y), 2)
     pygame.display.update()
-    if (GPIO.event_detected(BUT1)):
+    if (GPIO.input(BUT1)==0):
         x+=1
-    if (GPIO.event_detected(BUT3)):
+    if (GPIO.input(BUT3)==0):
         x-=1
-    if (GPIO.event_detected(BUT4)):
+    if (GPIO.input(BUT4)):
         y-=1
-    if (GPIO.event_detected(BUT2)):
+    if (GPIO.input(BUT2)):
         y+=1
     
     for event in pygame.event.get():
