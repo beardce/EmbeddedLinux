@@ -17,8 +17,8 @@ GPIO.setup(LED3, GPIO.OUT)
 GPIO.setup(LED4, GPIO.OUT)
 GPIO.setup(BUT1, GPIO.IN)
 GPIO.setup(BUT2, GPIO.IN)
-GPIO.setup(BUT3, GPIO.IN)
-GPIO.setup(BUT4, GPIO.IN)
+GPIO.setup(BUT3, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(BUT4, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 buttonMap = {BUT1: LED1, BUT2: LED2, BUT3: LED3, BUT4: LED4}
 
