@@ -11,3 +11,7 @@ inputs the display height and width then the x and y coordinates for the
 initial position of the cursor. The arrow keys are then used to maneuver
 the cursor and the space bar is used to "shake" the Etch-A-Sketch and clear
 the screen. The escape key is used to exit the program.
+
+// Comment from Prof. Yoder
+// Chace, looks good.  You are off to a good start.
+// Grade:  10/10
