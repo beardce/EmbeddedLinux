@@ -4,7 +4,23 @@
 #imports
 import pygame
 import sys
+import Adafruit_BBIO.GPIO as GPIO
+import time
 from pygame.locals import *
+
+BUT1 = "GP0_3"
+BUT2 = "GP0_4"
+BUT3 = "GP0_5"
+BUT4 = "GP0_6"
+
+GPIO.setup(BUT1, GPIO.IN)
+GPIO.setup(BUT2, GPIO.IN)
+GPIO.setup(BUT3, GPIO.IN)
+GPIO.setup(BUT4, GPIO.IN)
+GPIO.add_event_detect(BUT1, GPIO.FALLING)
+GPIO.add_event_detect(BUT2, GPIO.RISING)
+GPIO.add_event_detect(BUT3, GPIO.FALLING)
+GPIO.add_event_detect(BUT4, GPIO.RISING)
 
 # variables
 #screenXSize = 600
@@ -27,14 +43,13 @@ while(1):
     clock.tick(60) #keeps game from exceeding 60 fps
     pygame.draw.circle(screen, (0,0,0), (x,y), 2)
     pygame.display.update()
-    key = pygame.key.get_pressed()
-    if (key[pygame.K_RIGHT]):
+    if (GPIO.event_detected(BUT1)):
         x+=1
-    if (key[pygame.K_LEFT]):
+    if (GPIO.event_detected(BUT3)):
         x-=1
-    if (key[pygame.K_UP]):
+    if (GPIO.event_detected(BUT4)):
         y-=1
-    if (key[pygame.K_DOWN]):
+    if (GPIO.event_detected(BUT2)):
         y+=1
     
     for event in pygame.event.get():
