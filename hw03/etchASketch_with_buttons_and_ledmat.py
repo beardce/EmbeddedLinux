@@ -40,6 +40,9 @@ bus.write_byte_data(address1, 2, 25)
 bus.write_byte_data(address2, 2, 25)
 bus.write_byte_data(address1, 3, 25)
 bus.write_byte_data(address2, 3, 25)
+bus.write_byte_data(matrix, 0x21, 0)   # Start oscillator (p10)
+bus.write_byte_data(matrix, 0x81, 0)   # Disp on, blink off (p11)
+bus.write_byte_data(matrix, 0xe7, 0)   # Full brightness (page 15)
 
 while(1):
     clock.tick(10) #keeps game from exceeding 60 fps
@@ -67,7 +70,7 @@ while(1):
     
     if GPIO.input(INT1)==0 or GPIO.input(INT2)==0:
         disp = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
-        
+
     bus.write_i2c_block_data(matrix, 0, disp)
     
     #time.sleep(.25)
