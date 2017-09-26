@@ -4,3 +4,6 @@ is replaced with 97 and 98 (you have to make the call twice) then cd into each
 directory (gpio97, gpio98) and call "cat direction" if the output from that call 
 is "in" you need to call "echo out >> direction" to set the gpio ports to outputs
 for the leds
+
+For the etch a sketch, the buttons were removed and replaced with the rotary 
+encoders to control the etch a sketch.
