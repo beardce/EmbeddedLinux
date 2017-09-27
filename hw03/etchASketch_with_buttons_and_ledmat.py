@@ -7,7 +7,7 @@ import sys
 import Adafruit_BBIO.GPIO as GPIO
 import time
 import smbus
-from pygame.locals import *
+# from pygame.locals import *
 
 
 BUT1 = "GP0_3"

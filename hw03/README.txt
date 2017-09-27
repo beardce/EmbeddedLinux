@@ -9,3 +9,8 @@ etchASketch_with_buttons_and_ledmat.py: sets up the led matrix, tmp101 sensors
     and gpio inputs then uses the led matrix as the screen for the etch a sketch
     and uses the tmp101 alarm as the clear signal. To use just run the script and
     use the buttons to draw and the tmps to clear.
+    
+# Comments from Prof. Yoder
+# Looks good.  Nice comments.
+#   I'd remove the pygame dependency since you only use it for the clock.
+# Grade:  10/10
