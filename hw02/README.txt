@@ -8,3 +8,7 @@ The only difference is that buttons 1-4 are used to direct the cursor with butto
 button2=down, button3=left, and button4=up. Escape key still exits and space still shakes
 
 to use either of the programs run with python not python3 and use the defined inputs.
+
+# Comments from Prof. Yoder
+# Looks good.  
+# Grade:  10/10
