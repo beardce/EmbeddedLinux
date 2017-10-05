@@ -102,6 +102,7 @@ function LEDclick(i, j) {
     function matrix(data) {
         var i, j;
         disp = [];
+        disp2 = [];
         //        status_update("i2c: " + data);
         // Make data an array, each entry is a pair of digits
         data = data.split(" ");
@@ -111,16 +112,30 @@ function LEDclick(i, j) {
         // Convert from hex.
         for (i = 0; i < data.length; i += 2) {
             disp[i / 2] = parseInt(data[i], 16);
+            disp2[i / 2] = parseInt(data[i+1], 16);
         }
         //        status_update("disp: " + disp);
         // i cycles through each column
         for (i = 0; i < disp.length; i++) {
             // j cycles through each bit
             for (j = 0; j < 8; j++) {
-                if (((disp[i] >> j) & 0x1) === 1) {
-                    $('#id' + i + '_' + j).addClass('on');
-                } else {
-                    $('#id' + i + '_' + j).removeClass('on');
+                if (disp[i] >> j & 0x1 === 1) {
+                    if (disp2[i] >> j & 0x1 === 1) {
+                        $('#id' + i + '_' + j).addClass('onylw');
+                    }
+                    else {
+                        $('#id' + i + '_' + j).addClass('ongrn');
+                    }
+                }
+                else {
+                    if (disp2[i] >> j & 0x1 === 1) {
+                        $('#id' + i + '_' + j).addClass('onred');
+                    }
+                    else {
+                        $('#id' + i + '_' + j).removeClass('onylw');
+                        $('#id' + i + '_' + j).removeClass('ongrn');
+                        $('#id' + i + '_' + j).removeClass('onred');
+                    }
                 }
             }
         }
