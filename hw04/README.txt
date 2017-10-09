@@ -7,3 +7,8 @@ for the leds
 
 For the etch a sketch, the buttons were removed and replaced with the rotary 
 encoders to control the etch a sketch.
+
+# Comments from Prof. Yoder
+# Found your memory map file
+# I'd use > rather than >>.  Do you know the difference?
+# Grade:  10/10
