@@ -10,3 +10,7 @@ sudo node boneServer.js
 
 after that browse to 192.168.7.2:9090 and click on the matrixLED panel.
 
+# Comments from Prof. Yoder
+# Found your answers to the questions.  They look good.
+# Thanks for the demo.
+# Grade:  10/10
