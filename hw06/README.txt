@@ -16,3 +16,7 @@ I altered the code in the etch-a-sketch.c file to take user input for the color
 of the line and the size of the line. 
 
 to run all of these files make sure to use sudo
+
+// Comments from Prof. Yoder
+// For pygame see exercises/displays/ili9341/pygame
+// Grade:  10/10
