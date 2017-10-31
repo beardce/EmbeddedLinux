@@ -11,16 +11,19 @@ GPIO.setup(IN1, GPIO.IN)
 buttonMap = {IN1: OUT1}
 
 def updateLEDs(number):
-	print("LED number " + number)
+	#print("LED number " + number)
 	status = GPIO.input(number)
 	GPIO.output(buttonMap[number],status)
-	print(buttonMap[number] + "changed to status " + str(status))
+	#print(buttonMap[number] + "changed to status " + str(status))
+	
+print("running")
 
 GPIO.add_event_detect(IN1, GPIO.BOTH, callback = updateLEDs)
 
 try: 
 	while True:
-		time.sleep(25)
+		time.sleep(100)
+		
 
 except KeyboardInterrupt:
 	print("stopping")
